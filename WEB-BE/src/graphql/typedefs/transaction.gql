@@ -1,0 +1,23 @@
+type Transaction {
+    id: ID
+    transaction_code: String
+    course_id: ID
+    children_id: ID
+    amount: Int
+    status: String
+    created_at: Date
+    expired_at: Date
+    children_name: String
+    course_name: String
+}
+
+type TransactionReturn {
+    transaction: [Transaction]
+    info: InfoPage
+}
+
+# input
+input TransactionInput {
+    course_id: ID!
+    children_id: ID!
+}

@@ -1,0 +1,17 @@
+.notFoundMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/error.jpg");
+  background-size: cover;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  border-radius: 12px;
+}
+
+.title {
+  top: 0;
+  position: absolute;
+  margin-top: 50px;
+}

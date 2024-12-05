@@ -1,0 +1,33 @@
+.addCourse{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:3px dashed #000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 40px;
+}
+
+.addCourse:hover{
+    border: 3px dashed #736354;
+}
+
+@media (max-width: 1120px){
+    .addCourse{
+        width: 30%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px){
+    .addCourse{
+        width: 60%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px){
+
+}

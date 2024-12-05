@@ -1,0 +1,21 @@
+/* src/HomePage.module.css */
+
+.container {
+  margin: 0 auto;
+  min-height: 600px;
+  padding: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+}

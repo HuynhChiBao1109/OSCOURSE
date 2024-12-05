@@ -1,0 +1,34 @@
+type Course {
+  id: ID
+  title: String
+  thumbnail: String
+  price: Int
+  discount: Float
+  description: String
+  total_student_join: Int
+  created_at: Date
+  time_available: Int
+  category: String!
+  requirement: [String]
+  target: [String]
+  chapter: [CourseChapter]
+  updated_at: Date
+  status: String
+}
+
+type ListCourse {
+  course: [Course]
+  info: InfoPage
+}
+
+#Inputs
+input InputCreateNewCourse {
+  title: String!
+  thumbnail: String!
+  price: Int!
+  description: String!
+  category: String!
+  requirement: [String!]
+  target: [String!]
+  time_available: Int!
+}

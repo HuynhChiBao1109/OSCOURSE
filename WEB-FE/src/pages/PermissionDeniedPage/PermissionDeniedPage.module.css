@@ -1,0 +1,37 @@
+/* PermissionDeniedPage.module.css */
+
+.permissionDeniedContainer {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.heading {
+  color: #ff0000; /* Red color for the heading */
+}
+
+.paragraph {
+  margin-bottom: 15px;
+}
+
+.homeLink {
+  text-decoration: none;
+}
+
+.homeButton {
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #3498db; /* Blue color for the button background */
+  color: #fff; /* White color for the button text */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}

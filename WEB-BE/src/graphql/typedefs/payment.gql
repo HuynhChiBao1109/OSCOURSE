@@ -1,0 +1,18 @@
+type PaymentInfo {
+    amount: Int!
+    content: String!
+}
+
+type PaymentStatus {
+    status: String
+}
+
+# Inputs
+input InputPayment {
+    course_id: ID!
+    children_id: ID!
+}
+
+input InputPaymentStatus {
+    content: String!
+}

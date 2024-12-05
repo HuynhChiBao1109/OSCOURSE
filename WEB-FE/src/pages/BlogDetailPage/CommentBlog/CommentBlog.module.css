@@ -1,0 +1,88 @@
+.commentInput {
+    margin-top: 30px;
+    display: flex;
+}
+
+.commentInputItem input,
+.commentInput input {
+    margin-left: 20px;
+}
+
+.commentBtn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.commentBtn button {
+    margin-right: 10px;
+}
+
+.commentList {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+
+.commentMeta {
+    display: flex;
+    align-items: center;
+}
+
+.commentMeta>div {
+    background-color: #f2f3f5;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0 5px 10px;
+}
+
+.commentMetaReply {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.commentMetaReply>div {
+    background-color: #f2f3f5;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 15px 0 5px 10px;
+}
+
+.commentInputItem {
+    display: flex;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.replyInput {
+    padding-left: 20px;
+}
+
+.replyInput>div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.replyInput>div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 0 0;
+}
+
+.replyInput>div:last-child button {
+    margin-right: 10px;
+}
+
+.replyInput>div:first-child input {
+    margin-left: 20px;
+}
+
+.replies {
+    margin: 0 0 20px 20px;
+    border-left: 1px solid #000;
+}
+
+.itemActions button {
+    font-size: 14px;
+}

@@ -1,0 +1,98 @@
+# Custom Scalars
+scalar Date
+
+type Query {
+  # Users
+  getListUser(filter: FilterUser): ListUser
+  user(id: ID!): User
+  getListChildrenByParentId(parent_id: ID!): [Children]
+
+  #Courses
+  getListCourse(filter: filterCourse): ListCourse
+  getDetailCourse(id: ID!, user_id: ID): Course
+  getListCourseByAdmin(filter: filterPage): ListCourse
+
+  #CourseChapter
+  getDetailCourseChapter(id: ID!): CourseChapter
+
+  #ProgressCourse
+  getDetailProgressCourseByUser(children_id: ID!): [ProgressCourse]
+  getListProgressCourse: [ProgressCourse]
+
+  #Comment
+  getListCommentByCourse(course_id: ID!): [Comment]
+
+  #Transaction
+  getListTransactionByAdmin(filter: filterPage): TransactionReturn
+  getListTransactionByParent(parent_id: ID!): [Transaction]
+
+  #Collection
+  getCollectionByChildrenId(children_id: ID!): [Collection]
+  getListChildrenByCourseId(course_id: ID!, filter: filterPage): CollectionChildren
+
+  # Certificate
+  getListCertificateByChildrenId(children_id: ID!): Certificate
+
+  # Token
+  getAccessToken: GetToken
+
+  # Notification
+  getListNotificationByUserId(user_id: ID!): [Notification]
+
+  # Payment
+  getPaymentStatus(content: String!): PaymentStatus
+}
+
+
+type Mutation {
+  # Users
+  createUser(user: UserInputCreate!): User!
+  updateUser(user: UserInputUpdate!): User
+  deleteUser(id: ID!): User!
+  checkChildrenUserNameExist(children_username: String!, parent_email: String!): String
+  changePassWordByUser(id: ID!, password: String!): User
+
+  # Courses
+  createCourse(course: InputCreateNewCourse): Course
+  updateCourse(course: InputCreateNewCourse): Course
+  deleteCourse(id: ID!): Course
+
+  # CourseChapters
+  createCourseChapter(courseChapter: InputCourseChapter): CourseChapter
+  updateCourseChapter(courseChapter: InputCourseChapterUpdate): CourseChapter
+  deleteCourseChapter(course_chapter_id: ID!): CourseChapter
+
+  # courseLessons
+  createCourseLesson(courseLesson: InputCourseLesson): CourseLesson
+  deleteCourseLesson(course_lesson_id: ID!): String
+  updateLesson(lesson: InputUpdateLesson): CourseLesson
+
+  # Course lesson quiz
+  updateCourseLessonQuiz(quizLesson: InputQuizUpdateQuestion): CourseLesson
+  
+  # create video lesson
+  createVideoLesson(videoLesson: InputCreateVideoLesson): ReturnUpdateVideoCourseLesson!
+
+  # create quiz lesson
+  createQuizLesson(quizLesson: InputCreateQuizLesson): CourseLesson
+
+  # comments
+  createComment(comment: InputCreateComment): Comment!
+  deleteComment(id: ID!): Comment!
+
+  # Authen
+  loginByUser(user: LoginUser!): LoginUserReturn
+  loginByChildren(children: LoginChildren!): LoginChildrenReturn
+  registerParent(user: ParentInputCreate!): User!
+  registerChildren(children: ChildrenInputCreate!): Children!
+  forgotPassword(email: String!): ForgotPassword
+
+  # Payment
+  payCourse(course_id: ID!, children_id: ID!): PaymentInfo!
+
+  # Certificate
+  createCertificate(course_id: ID!, children_id: ID!): ReturnCertificate
+
+  # ProgressCourse
+  catchEventPassLesson(progressCourse: ProgressCourseInput!): ProgressCourse
+}

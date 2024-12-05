@@ -1,0 +1,129 @@
+.accomplishmentAdapter {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-width: 800px;
+  background-color: #ffffff;
+  padding: 24px;
+  padding-top: 50px;
+  border-radius: 12px;
+}
+
+@media (min-width: 1184px) {
+  .accomplishments {
+    width: 1184px;
+  }
+}
+
+@media (min-width: 824px) {
+  .accomplishments {
+    width: 720px;
+  }
+}
+
+@media (min-width: 608px) {
+  .accomplishments {
+    width: 600px;
+  }
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.accomplishments {
+  max-width: 1184px;
+  padding-left: 20px;
+  padding-right: 1.96078%;
+  width: 100%;
+}
+
+.accomplishmentWrapper {
+  display: flex;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pagination_section {
+  margin-bottom: 20px;
+}
+
+.certificateList {
+  margin-bottom: 10px;
+  color: #646464;
+}
+
+.headline-3-text {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.accomplishmentCard {
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.card-rich-interact {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.horizontal-box {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+}
+
+.vertical-box {
+  display: flex;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+}
+
+.vertical-box a {
+  touch-action: manipulation;
+}
+
+.vertical-box img {
+  vertical-align: middle;
+  border-style: none;
+  border: 0;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.headline-1-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: OpenSans, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.headline-1-text:hover {
+  text-decoration: underline;
+}
+
+.caption-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: OpenSans, Arial, sans-serif;
+}
+
+.card-content h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.card-content {
+  margin-left: 20px;
+}
+
+.btnView {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}

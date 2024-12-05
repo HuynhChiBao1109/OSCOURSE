@@ -1,0 +1,172 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model certificate {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  course_id     String @db.ObjectId
+  children_id   String @db.ObjectId
+  created_at    DateTime? @db.Date
+}
+
+model course {
+  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
+  category           String?
+  created_at         DateTime? @db.Date
+  description        String?
+  time_available     Int?
+  title              String?   @unique
+  total_student_join Int?
+  price              Int?
+  discount           Float?
+  thumbnail          String?
+  requirement        String[]
+  target             String[]
+  updated_at         DateTime? @db.Date
+  status             String?
+}
+
+enum TypeLesson {
+  video              
+  quiz               
+}
+
+model courseChapter {
+  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  course_id           String @db.ObjectId
+  chapter_name        String
+  chapter_order       Int
+}
+
+type QuizQuestions {
+  answer   String?
+  options  String[]
+  question String?
+}
+
+model courseLesson {
+  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  course_chapter_id   String? @db.ObjectId
+  lesson_name         String?
+  type_lesson         TypeLesson?
+  video_id            String?
+  lesson_order        Int?
+  quiz                QuizQuestions[]
+  pass_condition      Float?
+  time_expect         DateTime?            @db.Date
+}
+
+model progressCourse {
+  id                String                   @id @default(auto()) @map("_id") @db.ObjectId
+  course_id         String                   @db.ObjectId
+  expired_at        DateTime                 @db.Date
+  children_id       String                   @db.ObjectId
+  created_at        DateTime                 @db.Date
+  course_chapter_id String                   @db.ObjectId
+  course_lesson_id  String                   @db.ObjectId
+}
+
+model comment {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  parent_comment String @db.ObjectId
+  course_id      String @db.ObjectId
+  description    String
+  user_id        String @db.ObjectId
+}
+
+enum StatusTransaction {
+  success
+  pending
+  failed
+}
+
+model transaction {
+  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  course_id           String @db.ObjectId
+  amount              Int
+  status              StatusTransaction
+  children_id         String @db.ObjectId
+  transaction_code    String @unique
+  created_at          DateTime                    @db.Date
+  expired_at          DateTime                    @db.Date
+}
+
+model ratingCourse {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  course_id   String @db.ObjectId
+  description String
+  start_rate  Int
+  user_id     String @db.ObjectId
+}
+
+model report {
+  id                   String @id @default(auto()) @map("_id") @db.ObjectId
+  course_id            String @db.ObjectId
+  description          String
+  description_response String
+  reporter_id          String @db.ObjectId
+  status               String
+  title                String
+  type                 String
+}
+
+model user {
+  id                    String @id @default(auto()) @map("_id") @db.ObjectId
+  email                 String @unique(map: "email_1")
+  name                  String
+  password              String?
+  role                  RoleUser?
+  status                StatusUser?
+  date_of_birth         DateTime? @db.Date
+  phone                 String?
+  avatar                String?
+  gender                Gender?
+}
+
+enum Gender {
+  men
+  women
+}
+
+enum RoleUser {
+  children
+  parent
+  staff
+  admin
+  superAdmin
+}
+
+enum StatusUser {
+  active
+  inActive
+}
+
+model children {
+  id                    String @id @default(auto()) @map("_id") @db.ObjectId
+  name                  String
+  password              String
+  date_of_birth         DateTime @db.Date
+  avatar                String?
+  username              String  @unique
+  gender                Gender
+  parent_id             String
+  role                  RoleUser
+  status                StatusUser
+}
+
+model collection {
+  id                    String @id @default(auto()) @map("_id") @db.ObjectId
+  children_id           String? @db.ObjectId
+  course_id             String? @db.ObjectId
+  status                StatusCollection?
+}
+
+enum StatusCollection {
+  active
+  inActive
+}

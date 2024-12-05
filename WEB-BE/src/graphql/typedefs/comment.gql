@@ -1,0 +1,17 @@
+type Comment {
+    id: ID!
+    user_id: ID!
+    parent_comment: ID!
+    description: String!
+    course_id: ID!
+    user: User
+}
+
+#Inputs
+
+input InputCreateComment {
+    user_id: ID!
+    parent_comment: ID
+    description: String!
+    course_id: ID!
+}

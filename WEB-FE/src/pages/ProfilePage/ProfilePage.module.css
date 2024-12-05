@@ -1,0 +1,61 @@
+/* .upc {
+    width: 3500px;
+    margin: 20px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    background: white;
+} */
+
+.card body {
+  padding: none;
+}
+
+.upc {
+  margin-left: 200px;
+}
+
+.gradiant {
+  /* background-image: linear-gradient(#91baff, #205fff); */
+  height: 125px;
+
+  /* border-radius: 4px 4px 0px 0px; */
+}
+
+.gradiant button {
+  transform: translate(-110%, -50%);
+}
+
+.gradiant img {
+  width: 1100px;
+  height: 400px;
+}
+
+.profileDown {
+  display: flex;
+}
+
+.profileDown img {
+  height: 150px;
+  border-radius: 100px;
+  margin-top: 200px;
+  padding: 5px;
+  background: white;
+
+  transform: translate(30%, 0%);
+}
+
+.profileName {
+  margin-top: 300px;
+  font-size: 26px;
+  font-weight: 600;
+  transform: translate(75%, 0%)
+}
+
+
+.myCard {
+  display: flex;
+  width: 600px;
+  border: none;
+  margin-top: 20px;
+}
+

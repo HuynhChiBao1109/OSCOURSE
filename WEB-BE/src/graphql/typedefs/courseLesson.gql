@@ -1,0 +1,68 @@
+type CourseLesson {
+  id: ID!
+  course_chapter_id: String!
+  type_lesson: String!
+  video_id: String!
+  lesson_order: Int!
+  quiz: [QuizQuestions]
+  pass_condition: Float!
+  time_expect: Date!
+  lesson_name: String
+  isOpen: Boolean
+}
+
+type ReturnUpdateVideoCourseLesson {
+  courseLesson: CourseLesson
+  signedUrl: signedUrl
+}
+
+type signedUrl {
+  signedUrl: String
+  path: String
+  token: String
+}
+
+type QuizQuestions {
+  answer:   String!
+  options:  [String!]
+  question: String!
+}
+#Inputs
+input InputCourseLesson {
+  lesson_name: String!
+  course_chapter_id: String!
+  type_lesson: String!
+  lesson_order: Int!
+  time_expect: Date!
+}
+
+# input for request create video lesson
+input InputCreateVideoLesson {
+  course_id: String!
+  course_chapter_id: String!
+  lession_id: String!
+}
+
+# input for request create quiz lesson
+input InputCreateQuizLesson {
+  id: ID!
+  quiz: [InputQuizQuestion!]
+  pass_condition: Float!
+}
+
+input InputQuizQuestion {
+  question: String!
+  options: [String!]
+  answer: String!
+}
+
+input InputQuizUpdateQuestion {
+  quiz: [InputQuizQuestion!]
+  pass_condition: Int!
+  course_lesson_id: ID!
+}
+
+input InputUpdateLesson {
+  id: ID!
+  lesson_name: String!
+}

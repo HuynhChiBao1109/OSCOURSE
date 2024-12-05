@@ -1,0 +1,18 @@
+type ProgressCourse{
+    id: ID
+    course_id: ID
+    children_id: ID
+    expired_at: Date!
+    created_at: Date!
+    course_chapter_id: ID
+    course_lesson_id: ID
+}
+
+
+# input
+input ProgressCourseInput{
+    course_id: ID!
+    children_id: ID!
+    course_chapter_id: ID!
+    course_lesson_id: ID!
+}

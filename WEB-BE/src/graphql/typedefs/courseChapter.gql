@@ -1,0 +1,22 @@
+type CourseChapter {
+    id: ID!
+    course_id: ID!
+    chapter_name: String!
+    chapter_order: Int!
+    lessons: [CourseLesson]
+}
+
+
+#Inputs
+input InputCourseChapter {
+    course_id: ID!
+    chapter_name: String!
+    chapter_order: Int
+}
+
+input InputCourseChapterUpdate {
+    id: ID!
+    course_id: ID!
+    chapter_name: String!
+    chapter_order: Int
+}

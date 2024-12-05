@@ -1,0 +1,16 @@
+type Certificate {
+    created_at: Date
+    children: Children
+    course: CourseCertificate
+}
+
+type CourseCertificate {
+    title: String
+    description: String
+}
+
+type ReturnCertificate {
+    created_at: Date
+    children_id: ID
+    course_id: ID
+}

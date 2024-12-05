@@ -1,0 +1,42 @@
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.formImg {
+  width: 150px;
+  height: 150px;
+}
+
+.formItemContainer {
+  width: 400px;
+}
+
+.ant-select {
+  width: 100px !important;
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.formBtnImg {
+  height: 100px !important;
+  width: 180px !important;
+}
+
+.formSelectImg {
+  width: 180px;
+  height: 160px;
+  border-radius: 20%;
+}
+
+.formBtnImg svg {
+  height: 60% !important;
+  width: 80% !important;
+}

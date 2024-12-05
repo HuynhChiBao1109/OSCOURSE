@@ -1,0 +1,17 @@
+.courseCard {
+    display: flex;
+}
+
+.courseCard img{
+    border-radius: 10px;
+    height: 80px;
+    width: 160px;
+}
+
+.courseCard > div{
+    padding: 10px 20px;
+}
+
+.courseCard > div > div{
+    font-weight: bold;
+}

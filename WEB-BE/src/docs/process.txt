@@ -1,0 +1,8 @@
+API:
+-CRUD khoá học, crd khoá học đã mua
+-CRUD user: parent + student + staff + admin + supervisor 
+-CRUD BLog
+-CRUD comment + like
+-View transaction + View detail
+-Login
+-View dashboard

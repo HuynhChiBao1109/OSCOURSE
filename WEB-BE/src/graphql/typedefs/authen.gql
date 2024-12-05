@@ -1,0 +1,65 @@
+type LoginUserReturn {
+    token: String!
+    User: User
+}
+
+type LoginChildrenReturn {
+    token: String!
+    Children: Children
+}
+
+type Token {
+    accessToken: String
+    refreshToken: String
+}
+
+type GetToken {
+    accessToken: String
+}
+
+type ForgotPassword {
+    message: String
+    code: Int
+}
+
+# Inputs
+input UserInputCreate {
+    email: String!
+    name: String!
+    password: String!
+    role: String
+    status: String!
+    date_of_birth: Date!
+    phone: String!
+    avatar: String
+    gender: String!
+}
+
+input ParentInputCreate {
+    email: String!
+    name: String!
+    password: String!
+    date_of_birth: Date!
+    phone: String!
+    gender: String!
+}
+
+input ChildrenInputCreate {
+    name: String!
+    date_of_birth: Date!
+    password: String!
+    avatar: String
+    parent_id: ID!
+    gender: String!
+    username: String!
+}
+
+input LoginUser {
+    email: String!
+    password: String!
+}
+
+input LoginChildren {
+    username: String!
+    password: String!
+}

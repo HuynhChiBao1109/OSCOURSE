@@ -1,0 +1,25 @@
+type InfoPage {
+    totalPage: Int
+    pageSize: Int
+    currentPage: Int
+}
+
+#Inputs
+input filterCourse {
+  pageSize: Int!
+  currentPage: Int!
+  category: String
+  searchName: String
+}
+
+input filterPage {
+    pageSize: Int!
+    currentPage: Int!
+}
+
+input FilterUser {
+    pageSize: Int!
+    currentPage: Int!
+    searchName: String
+    role: String
+}

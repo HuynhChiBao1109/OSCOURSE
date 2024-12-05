@@ -1,0 +1,12 @@
+type Collection {
+    id: ID
+    children_id: ID
+    course: Course
+}
+
+type CollectionChildren {
+    children: [Children]
+    pageSize: Int
+    currentPage: Int
+    totalPage: Int
+}

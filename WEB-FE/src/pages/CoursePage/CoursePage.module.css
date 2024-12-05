@@ -1,0 +1,36 @@
+.container {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  height: auto;
+}
+
+.sliderContent {
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(40, 119, 250), rgb(103, 23, 205));
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sliderContent img {
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .sliderContent {
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 480px) {
+  .sliderContent {
+    height: 200px;
+    background-color: red;
+  }
+}

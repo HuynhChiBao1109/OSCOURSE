@@ -1,0 +1,64 @@
+type User {
+    id: ID
+    email: String
+    name: String
+    password: String
+    role: String
+    status: String
+    date_of_birth: Date
+    phone: String
+    avatar: String
+    gender: String
+}
+
+type Children {
+    id: ID
+    name: String
+    date_of_birth: Date
+    password: String
+    parent_id: ID
+    avatar: String
+    gender: String
+    username: String
+    role: String
+}
+
+# define list reutn
+
+type ListUser {
+    user: [User]
+    info: InfoPage
+}
+
+
+#Inputs
+input UserInputUpdate {
+    id: ID!
+    name: String!
+    date_of_birth: Date!
+    phone: String!
+    avatar: String!
+    gender: String!
+}
+
+
+input ChildrenInputUpdate {
+    name: String!
+    date_of_birth: Date!
+    password: String!
+    avatar: String
+    parent_id: ID!
+    gender: String!
+    username: String!
+    role: String
+}
+
+input ParentInputUpdate {
+    id: ID!
+    email: String!
+    name: String!
+    password: String!
+    date_of_birth: Date!
+    phone: String!
+    avatar: String
+}

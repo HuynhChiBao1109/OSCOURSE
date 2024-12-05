@@ -1,0 +1,6 @@
+type Notification {
+    message: String
+    is_read: Boolean
+    user_id: String
+    created_at: Date
+}

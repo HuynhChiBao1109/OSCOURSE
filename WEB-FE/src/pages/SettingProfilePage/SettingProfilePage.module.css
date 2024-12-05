@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+}
+
+.container>div:first-child {
+    width: 30%;
+}
+
+.container>div:last-child {
+    width: 50%;
+    padding: 20px;
+}
+
+.settingContent h4 {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    color: black;
+    font-size: 1.6em;
+    margin: 0 0 20px;
+    padding: 10px 0;
+
+}
+
+.settingInput {
+    margin-bottom: 20px;
+}
+
+.settingInput>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.settingInput>div h5 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.settingInput>div button {
+    border-radius: 20px;
+}
+
+.settingInput input {
+    width: 70%;
+}
+
+.settingInput p {
+    color: #757575;
+    font-size: 0.9em;
+    line-height: 2rem;
+}
